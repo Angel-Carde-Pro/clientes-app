@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4" *ngFor="let proveedor of proveedores">
+      <div class="card border-info mb-3">
+        <img class="card-img-top" src="{{ proveedor.fotografia }}" alt="{{ proveedor.nombre }}">
+        <div class="card-body">
+          <h5 class="card-title text-primary">ID: {{ proveedor.id }}</h5>
+          <h5 class="card-title text-primary">Nombre: {{ proveedor.nombre + ' ' + proveedor.apellido }}</h5>
+          <p class="card-text text-secondary">Productos Venta: {{ proveedor.productos }}</p>
+          <p class="card-text text-secondary">Dirección: {{ proveedor.direccion }}</p>
+          <p class="card-text text-secondary">Celular: {{ proveedor.celular }}</p>
+          <p class="card-text text-secondary">Edad: {{ proveedor.edad }}</p>
+          <p class="card-text text-secondary">Fecha Registro: {{ proveedor.fechaRegistro | date }}</p>
+          <a href="{{ proveedor.redSocial }}" class="card-link">Red Social</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

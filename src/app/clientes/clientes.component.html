@@ -1,0 +1,28 @@
+<!--! my-3  indica un margen de 3 -->
+<div class="card border-primary mb-3" style="max-width: 30rem;">
+    <div class="card-body">
+        <h5 class="card-title">Clientes</h5>
+        <p class="card-text">Listado de Clientes</p>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Fecha</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cliente of clientes">
+                    <td>{{cliente.id}}</td>
+                    <td>{{cliente.nombre}}</td>
+                    <td>{{cliente.apellido}}</td>
+                    <td>{{cliente.createAt}}</td>
+                    <td>{{cliente.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
